@@ -1,6 +1,6 @@
 # NeutralToken Widget
 
-The **NeutralToken Widget** is an open, embeddable JavaScript SDK for verifying user eligibility — such as age or jurisdiction — using the [NeutralToken protocol](https://github.com/neutraltoken/neutraltoken-spec).
+The **NeutralToken Widget** is an open, embeddable JavaScript SDK for verifying user eligibility — such as age or jurisdiction — using the [NeutralToken protocol](https://github.com/NeutralToken-Foundation/neutraltoken-spec).
 
 This SDK is maintained by the **NeutralToken Foundation** and is protocol-compliant with profiles like `jwt-basic` and `jwt-blind`.
 
@@ -18,7 +18,7 @@ This SDK is maintained by the **NeutralToken Foundation** and is protocol-compli
 ## 🧩 Usage Example
 
 ```html
-<script src="https://cdn.neutraltoken.org/widget.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@neutraltoken/core@latest/dist/neutraltoken.min.js"></script>
 <script>
   NeutralToken.requestBadge({
     credential_profile: "jwt-basic",
@@ -79,7 +79,7 @@ The button will adapt to the correct background, text color, and hover state bas
 ## 📦 Install via NPM
 
 ```bash
-npm install @neutraltoken/widget
+npm install @neutraltoken/core
 ```
 
 ---
