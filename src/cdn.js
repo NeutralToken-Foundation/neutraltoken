@@ -22,6 +22,15 @@ if (typeof document !== 'undefined') {
   }
 }
 
-export const CDN_BASE = local
+// Only use local assets if running in the original dev project (not when installed as a dependency)
+// Check for the presence of process.env.NEUTRALTOKEN_DEV or window.NEUTRALTOKEN_DEV
+let isDev = false;
+if (typeof process !== 'undefined' && process.env && process.env.NEUTRALTOKEN_DEV) {
+  isDev = true;
+} else if (typeof window !== 'undefined' && window.NEUTRALTOKEN_DEV) {
+  isDev = true;
+}
+
+export const CDN_BASE = isDev
   ? './dist'
   : `https://cdn.jsdelivr.net/npm/@neutraltoken/core@${version}/dist`;

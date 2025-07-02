@@ -120,6 +120,22 @@ To bundle:
 npm run build
 ```
 
+### Local Asset Testing
+
+- By default, the widget loads logo and CSS assets from the CDN when used as an npm package.
+- **For local development in this repo only**, you can use local assets from `./dist/` by setting a development flag:
+  - In your terminal before running the dev server:
+    ```sh
+    export NEUTRALTOKEN_DEV=1
+    npm run dev
+    ```
+  - Or, in the browser console before loading the widget:
+    ```js
+    window.NEUTRALTOKEN_DEV = true;
+    ```
+- This ensures you see your local changes to assets without publishing to npm.
+- **Note:** When the package is installed as a dependency, it will always use the CDN for assets, ensuring reliability for all users.
+
 ---
 
 ## 🤝 Contributing
