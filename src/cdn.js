@@ -4,7 +4,7 @@ import pkg from '../package.json' assert { type: 'json' };
 let version = pkg.version;
 if (typeof document !== 'undefined') {
   const currentScript = document.currentScript?.src || '';
-  const match = currentScript.match(/neutraltoken@(.*?)(\/|$)/);
+  const match = currentScript.match(/@neutraltoken\/core@(.*?)(\/|$)/);
   if (match && match[1]) {
     version = match[1];
   } else if (currentScript.includes('@latest')) {
