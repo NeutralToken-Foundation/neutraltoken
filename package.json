@@ -10,7 +10,8 @@
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "test:browser": "playwright test",
-    "build": "vite build"
+    "build": "vite build",
+    "dev": "vite"
   },
   "dependencies": {
     "assert": "^2.1.0",

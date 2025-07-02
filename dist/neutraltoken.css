@@ -19,7 +19,7 @@
   }
   
   .pb-modal img {
-    width: 48px;
+    width: 160px;
     margin-bottom: 16px;
   }
   
@@ -63,44 +63,34 @@
 
  /* Light mode (default) */
 .verify-button {
-    background-color: #005bbb;
-    color: white;
-    border: none;
-    padding: 10px 16px;
-    font-size: 14px;
-    font-weight: 500;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+  background-color: #fff !important;
+  color: #005bbb !important;
+  border: none !important;
+  padding: 0 !important;
+  border-radius: 6px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 120px !important;
+  height: 48px !important;
+  cursor: pointer !important;
+  transition: box-shadow 0.3s !important;
+}
+.verify-button img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+.verify-button:hover {
+  background-color: #f0f6ff !important;
+  box-shadow: 0 2px 8px 0 rgba(0, 91, 187, 0.10) !important;
+}
+[data-theme="dark"] .verify-button {
+  background-color: #222 !important;
+}
+@media (prefers-color-scheme: dark) {
+  .verify-button {
+    background-color: #222 !important;
   }
-  .verify-button img {
-    width: 20px;
-    height: 20px;
-  }
-  
-  .verify-button:hover {
-    background-color: #004799;
-  }
-  
-  /* Dark mode with prefers-color-scheme */
-  @media (prefers-color-scheme: dark) {
-    .verify-button {
-      background-color: #1d2c3b;
-      color: white;
-    }
-    .verify-button:hover {
-      background-color: #273c50;
-    }
-  }
-  
-  /* Manual override with data-theme */
-  [data-theme="dark"] .verify-button {
-    background-color: #1d2c3b;
-    color: white;
-  }
-  [data-theme="dark"] .verify-button:hover {
-    background-color: #273c50;
-  }
+}

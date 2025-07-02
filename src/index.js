@@ -43,8 +43,7 @@ export function renderButton(target, config = {}) {
   const button = document.createElement('button');
   button.className = 'verify-button';
   button.innerHTML = `
-    <img src="${CDN_BASE}/logo.png" alt="Verify with NeutralToken" />
-    <span>Verify with NeutralToken</span>
+    <img src="${CDN_BASE}/logo.png" alt="NeutralToken logo" />
   `;
 
   button.addEventListener('click', () => {
