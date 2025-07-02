@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>QR Code Flow</title>
+  <script type="module">
+    import { requestBadge } from '../src/index.js';
+    window.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('qr').onclick = () => {
+        requestBadge({
+          reason: 'Scan QR with wallet',
+          issuer: 'https://issuer.example'
+        }).then(console.log).catch(console.error);
+      };
+    });
+  </script>
+</head>
+<body>
+  <button id="qr">Start QR Flow</button>
+</body>
+</html>

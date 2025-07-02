@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Widget Load Test</title>
+  <script src="../dist/neutraltoken.min.js" onerror="console.error('❌ Failed to load widget.js')"></script>
+</head>
+<body>
+  <h1>Testing Widget Global</h1>
+  <script>
+    function waitForWidget(retries = 20) {
+      if (typeof window.NeutralToken === 'object' &&
+          typeof window.NeutralToken.requestBadge === 'function') {
+        console.log("✅ Widget loaded and requestBadge is available.");
+        return;
+      }
+
+      if (retries <= 0) {
+        console.error("❌ Widget did not load in time.");
+        return;
+      }
+
+      setTimeout(() => waitForWidget(retries - 1), 100);
+    }
+
+    waitForWidget();
+  </script>
+</body>
+</html>

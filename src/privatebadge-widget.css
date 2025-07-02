@@ -1,0 +1,106 @@
+.pb-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+  .pb-modal {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    width: 320px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    font-family: system-ui, sans-serif;
+    text-align: center;
+  }
+  
+  .pb-modal img {
+    width: 48px;
+    margin-bottom: 16px;
+  }
+  
+  .pb-modal h2 {
+    margin: 0 0 8px;
+  }
+  
+  .pb-modal p {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .pb-modal small {
+    font-size: 11px;
+    color: #777;
+    display: block;
+    margin-top: 12px;
+  }
+  
+  .pb-button-primary {
+    background: #5e3bff;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 24px;
+  }
+  
+  .pb-button-secondary {
+    background: transparent;
+    color: #555;
+    border: none;
+    padding: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+ /* Light mode (default) */
+.verify-button {
+    background-color: #005bbb;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .verify-button img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .verify-button:hover {
+    background-color: #004799;
+  }
+  
+  /* Dark mode with prefers-color-scheme */
+  @media (prefers-color-scheme: dark) {
+    .verify-button {
+      background-color: #1d2c3b;
+      color: white;
+    }
+    .verify-button:hover {
+      background-color: #273c50;
+    }
+  }
+  
+  /* Manual override with data-theme */
+  [data-theme="dark"] .verify-button {
+    background-color: #1d2c3b;
+    color: white;
+  }
+  [data-theme="dark"] .verify-button:hover {
+    background-color: #273c50;
+  }
