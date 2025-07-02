@@ -1,6 +1,6 @@
 {
   "name": "@neutraltoken/core",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "main": "dist/neutraltoken.min.js",
   "type": "module",
   "files": [
