@@ -105,7 +105,7 @@ This widget supports:
 
 ---
 
-## 🛠 Development
+## 🛠 Local Development
 
 To build locally:
 
