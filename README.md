@@ -120,6 +120,20 @@ To bundle:
 npm run build
 ```
 
+
+### Release Process
+
+To create a new release:
+1. Make the release script executable:
+   ```bash
+   chmod +x release.sh
+   ```
+
+2. Run the release script:
+   ```bash
+   ./release.sh
+   ```
+
 ### Local Asset Testing
 
 - By default, the widget loads logo and CSS assets from the CDN when used as an npm package.

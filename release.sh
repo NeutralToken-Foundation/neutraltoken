@@ -5,6 +5,7 @@ read -p "Enter commit message: " msg
 
 git add .
 git commit -m "$msg"
+npm run build
 npm version patch
 npm publish --access public
 git push origin main --follow-tags
