@@ -53,7 +53,7 @@ renderButton('#verify-container', {
 Make sure to include the CSS in your page:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neutraltoken@latest/dist/neutraltoken.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@neutraltoken/core@latest/dist/neutraltoken.css" />
 ```
 
 The button will automatically include the NeutralToken logo and apply styles that match your user's system theme.
