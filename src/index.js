@@ -29,6 +29,12 @@ export function renderButton(target, config = {}) {
     link.id = 'neutraltoken-css';
     link.rel = 'stylesheet';
     link.href = `${CDN_BASE}/neutraltoken.css`;
+    if (CDN_BASE === './dist') {
+      link.onerror = function () {
+        this.onerror = null;
+        this.href = 'https://cdn.jsdelivr.net/npm/@neutraltoken/core@latest/dist/neutraltoken.css';
+      };
+    }
     document.head.appendChild(link);
   }
 
@@ -42,9 +48,17 @@ export function renderButton(target, config = {}) {
 
   const button = document.createElement('button');
   button.className = 'verify-button';
-  button.innerHTML = `
-    <img src="${CDN_BASE}/logo.png" alt="NeutralToken logo" />
-  `;
+  // Add fallback to CDN if local logo fails to load
+  const img = document.createElement('img');
+  img.src = `${CDN_BASE}/logo.png`;
+  img.alt = 'NeutralToken logo';
+  if (CDN_BASE === './dist') {
+    img.onerror = function () {
+      this.onerror = null;
+      this.src = `https://cdn.jsdelivr.net/npm/@neutraltoken/core@latest/dist/logo.png`;
+    };
+  }
+  button.appendChild(img);
 
   button.addEventListener('click', () => {
     requestBadge(config)
