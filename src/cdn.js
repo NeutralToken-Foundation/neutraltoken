@@ -12,4 +12,4 @@ if (typeof document !== 'undefined') {
   }
 }
 
-export const CDN_BASE = `https://cdn.jsdelivr.net/npm/neutraltoken@${version}/dist`;
+export const CDN_BASE = `https://cdn.jsdelivr.net/npm/@neutraltoken/core@${version}/dist`;
