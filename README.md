@@ -172,6 +172,13 @@ To create a new release:
 
 ---
 
+## 🧑‍💻 Reference Implementations / Sample Projects
+
+- [demo-issuer](https://github.com/NeutralToken-Foundation/demo-issuer): A sample/test NeutralToken Issuer for development and integration testing.
+- [demo-verifier](https://github.com/NeutralToken-Foundation/demo-verifier): A sample/test NeutralToken Verifier for development and integration testing.
+
+---
+
 ## 🤝 Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) in this repo or the [NeutralToken Foundation site](https://neutraltoken.org/community).
