@@ -106,9 +106,15 @@ function requestBadge(config = {}) {
 
       console.log('🪵 Payload verified:', payload);
       resolve(payload);
+      if (typeof config.onSuccess === 'function') {
+        config.onSuccess(payload);
+      }
     } catch (err) {
       console.error('❌ requestBadge error:', err);
       reject(err);
+      if (typeof config.onError === 'function') {
+        config.onError(err);
+      }
     }
   });
 }

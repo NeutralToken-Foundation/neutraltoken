@@ -17,20 +17,40 @@ This SDK is maintained by the **NeutralToken Foundation** and is protocol-compli
 
 ## 🧩 Usage Example
 
-```html
-<script src="https://cdn.jsdelivr.net/npm/@neutraltoken/core@latest/dist/neutraltoken.min.js"></script>
-<script>
-  NeutralToken.requestBadge({
-    credential_profile: "jwt-basic",
-    min_age: 21
-  }).then(result => {
+### Promise Style (Recommended)
+
+```js
+NeutralToken.requestBadge({
+  credential_profile: "jwt-basic",
+  min_age: 21
+}).then(result => {
+  if (result.verified) {
+    console.log("Access granted");
+  } else {
+    console.warn("Verification failed");
+  }
+}).catch(err => {
+  console.error("Verification error", err);
+});
+```
+
+### Callback Style (Also Supported)
+
+```js
+NeutralToken.requestBadge({
+  credential_profile: "jwt-basic",
+  min_age: 21,
+  onSuccess: (result) => {
     if (result.verified) {
       console.log("Access granted");
     } else {
       console.warn("Verification failed");
     }
-  });
-</script>
+  },
+  onError: (err) => {
+    console.error("Verification error", err);
+  }
+});
 ```
 
 ---
